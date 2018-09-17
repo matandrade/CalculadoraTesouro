@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simulador Tesouro Direto</title>
+
+    <script type="text/javascript" src="script.js"></script>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="font-family: verdana">
+    <div class="container-pai-pai">
+
+        <div class="container-pai" style="width: 40%">
+
+            <div class="container-filho" style="align-self: center ; width: 98% ">
+
+                <div style="font-size: 26px" id="page-title">Simulador Tesouro Direto</div>
+
+            </div>
+            <div class="container-filho" style="font-size: 18px">
+                <div> Escolha o investimento: <span>
+                        <select  id="tipoTesouro" style="font-size: 18px">
+                            <optgroup label="Tesouro PREFIXADO">
+                                <option value="pre2021">Tesouro Prefixado 2021</option>
+                                <option value="pre2025">Tesouro Prefixado 2025</option>
+                            </optgroup>
+                            <optgroup label="Tesouro IPCA+">
+                                <option value="ipca2024">Tesouro IPCA+ 2024</option>
+                                <option value="ipca2035">Tesouro IPCA+ 2035</option>
+                                <option value="ipca2045">Tesouro IPCA+ 2045 </option>
+                            </optgroup>
+                            <optgroup label="Tesouro SELIC">
+                                <option value="selic2023">Tesouro Selic 2023</option>
+                            </optgroup>
+                        </select>
+                </div>
+                </span>
+            </div>
+            <div class="container-filho" style="height: auto; width: 98% ">
+                <div class="container-filho-filho">
+                    <div class="item-input">
+                        Insira os seus planos para investimento
+                    </div>
+                    <div class="item-input">
+                        Aporte Mensal em [R$]:
+                        <input id="aporte_mensal" value=1000>
+                    </div>
+                    <div class="item-input">
+                        SELIC a.a. em [%]:
+                        <input id="selic" value=6.5>
+                    </div>
+                    <div class="item-input">
+                        Inflação a.a. em [%]:
+                        <input id="inflacao" value=4.48>
+                    </div>
+
+                    <div class="item-input" style="text-align: center">
+                        <button onclick="result()">Mostrar Resultados</button>
+                    </div>
+                </div>
+                <div class="container-filho-filho">
+                    <div class="item-input">
+                        Tesouro Prefixado 2021 em [%] a.a
+                        <input id="prefixado2021" value=9.84>
+                    </div>
+                    <div class="item-input">
+                        Tesouro Prefixado 2025 em [%] a.a
+                        <input id="prefixado2025" value=12.17>
+                    </div>
+                    <div class="item-input">
+                        Tesouro IPCA+ 2024 em [%] a.a
+                        <input id="ipca2024" value=5.83>
+                    </div>
+                    <div class="item-input">
+                        Tesouro IPCA+ 2035 em [%] a.a
+                        <input id="ipca2035" value=5.88>
+                    </div>
+                    <div class="item-input">
+                        Tesouro IPCA+ 2045 em [%] a.a
+                        <input id="ipca2045" value=5.88>
+                    </div>
+                    <div class="item-input">
+                        Tesouro Selic 2023 em [%] a.a
+                        <input id="selic2023" value=0.01>
+                    </div>
+                </div>
+            </div>
+            <div class="container-filho" style="height: 300px; width: 98% ">
+
+                <div class="container-filho-filho">
+                    <div class="item-input">
+                        Tesouro Prefixado 2025
+                    </div>
+                    <div class="item-input">
+                        Rend. Atual: <span id="rendPre"> 12.00%</span>
+                    </div>
+                    <div class="item-input">
+                        Valor Depositado Nominal: <span id="parcNominal"> --</span>
+                    </div>
+                    <div class="item-input">
+                        Valor Futuro: <span id="valorPre"> --</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-pai" style="width: 60%">
+            <div id="tituloInvestimento" style="text-align: center ; font-size: 28PX">Investimento</div>
+
+            <div id="tabela" style="overflow-x:auto;">
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

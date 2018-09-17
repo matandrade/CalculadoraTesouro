@@ -1,0 +1,81 @@
+.container-pai-pai {
+    display: flex;
+    height: 1200px;
+    margin: 0px 50px;
+    background-color: #DDDDDD;
+}
+
+.container-pai {
+    flex-direction: column;
+    display: flex;
+    height: 96%;
+    margin: 20px 20px;
+    background-color: #EEEEEE;
+}
+
+.container-filho {
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+    border-radius: 10px;
+    background-color: #777777;
+    width: 90%;
+    height: 100px;
+    margin: 10px;
+}
+
+.container-filho-filho {
+    flex-direction: column;
+    display: flex;
+    border-radius: 15px;
+    background-color: #BBBBBB;
+    color: rgb(162, 214, 235);
+    width: 400px;
+    height: 90%;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+}
+
+.item-input {
+    border-radius: 7px;
+    background-color: #AAAAAA;
+    color: #111111;
+    font-weight: bold;
+    width: 95%;
+    height: 15%;
+    margin: 5px;
+    text-align: left;
+    line-height: 25px;
+    font-size: 15px;
+}
+
+#page-title{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.chart {
+    background: transparent;
+    width: 500px;
+    height: 100px;
+    border-left: 1px dotted #555;
+    border-bottom: 1px dotted #555;
+    padding: 20px 20px 20px 0;
+    margin: 50px
+  }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: center;
+    padding: 8px;
+
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
