@@ -1,7 +1,7 @@
 .container-pai-pai {
     display: flex;
     height: 1200px;
-    margin: 150px 50px;
+    margin: 55px 50px;
     background-color: #DDDDDD;
 }
 
@@ -80,10 +80,35 @@ th, td {
 tr:nth-child(even){background-color: #f2f2f2}
 
 
-#fixedheader {
+.header {
     position: fixed;
     top: 0px;
     left: 0px;
     align-content: center;
+    background-color: #800080;
     text-align: center;
+    width: 100%;
 }
+
+.mobile {
+    display: none;
+    position: fixed;
+    top:0px;
+    background-color: #800080;
+    width: 50px;
+    height: 100%;
+}
+
+@media screen and (max-width: 800px) /* height >= 820 px */
+{
+    .header {
+        display:none;
+    }
+    .container-pai-pai{
+        margin: 0px 0px 0px 55px;
+    }
+    .mobile{
+        display: initial;
+    }
+}
+
